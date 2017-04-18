@@ -39,4 +39,10 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # Redis cache
+  config.cache_store = :redis_store, 'redis://127.0.0.1:6379', {
+    namespace:  'cache',
+    expires_in: 5400
+  }
 end
