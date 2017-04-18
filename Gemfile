@@ -58,4 +58,5 @@ end
 
 group :test do
   gem 'rspec-rails'
+  gem 'fakeredis', require: 'fakeredis/rspec'
 end
