@@ -10,5 +10,11 @@ services:
       - 9001:3000
     depends_on:
       - redis
+      - postgres
   redis:
     image: redis
+  postgres:
+    image: postgres:9.6
+    volumes:
+      - ./db/data:/var/lib/postgres/data
+    env_file: .env.postgres
