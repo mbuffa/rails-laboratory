@@ -3,3 +3,7 @@ rvm:
   - 2.4.1
 services:
   - redis-server
+addons:
+  apt:
+    packages:
+      - libpq-dev
