@@ -51,6 +51,11 @@ Rails.application.configure do
 
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
+  # Redis cache
+  config.cache_store = :redis_store, 'redis://redis:6379', {
+    namespace:  'cache',
+    expires_in: 5400
+  }
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
