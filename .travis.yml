@@ -1,9 +1,7 @@
-language: ruby
-rvm:
-  - 2.4.1
+sudo: required
+dist: trusty
 services:
-  - redis-server
-addons:
-  apt:
-    packages:
-      - libpq-dev
+  - docker
+
+before_install:
+  - docker-compose up --build
