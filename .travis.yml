@@ -4,4 +4,10 @@ services:
   - docker
 
 before_install:
+  # FIXME: We shouldn't run 'web''s rails server on travis!
   - docker-compose up --build
+  - docker exec -it railslaboratory_web_1 -e RAILS_ENV=test bundle exec rake db:create
+  - docker exec -it railslaboratory_web_1 -e RAILS_ENV=test bundle exec rake db:migrate
+
+script:
+  - docker exec -it railslaboratory_web_1 bundle exec rspec
