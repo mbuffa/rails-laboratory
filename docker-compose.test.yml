@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  web:
+    command: ./script/prepare_and_test.sh
+    environment:
+      RAILS_ENV: test
