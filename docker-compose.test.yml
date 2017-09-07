@@ -2,6 +2,6 @@ version: '3'
 
 services:
   web:
-    command: ./script/prepare_and_test.sh
+    command: ''
     environment:
       RAILS_ENV: test
