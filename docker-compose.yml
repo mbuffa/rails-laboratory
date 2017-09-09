@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: rails server -b 0.0.0.0
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - 9001:3000
+    links:
+      - redis
+      - postgres
+    env_file: .env.web
+  worker:
+    build: .
+    command: bundle exec sidekiq
+    volumes:
+      - .:/usr/src/app
+    links:
+      - web
+      - redis
+      - postgres
+    environment:
+      REDIS_URL: redis://redis:6379
+  redis:
+    image: redis
+  postgres:
+    image: postgres:9.6
+    volumes:
+      - ./db/data:/var/lib/postgres/data
+    env_file: .env.postgres
