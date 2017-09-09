@@ -43,6 +43,8 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-remote'
   gem 'pry-stack_explorer'
+
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -54,8 +56,4 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 
   gem 'foreman'
-end
-
-group :test do
-  gem 'rspec-rails'
 end
