@@ -211,6 +211,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  byebug
   coffee-rails (~> 4.2)
   foreman
   jbuilder (~> 2.5)
@@ -235,4 +236,4 @@ DEPENDENCIES
   web-console
 
 BUNDLED WITH
-   1.13.6
+   1.15.1
