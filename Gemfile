@@ -8,6 +8,7 @@ gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 gem 'webpacker', '~> 3.0'
+gem 'sass-rails', '~> 5'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
 
