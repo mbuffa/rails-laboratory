@@ -8,7 +8,11 @@ body {
     background-color: #dddddd;
     border: 0.10em solid black;
     margin: auto;
-    padding: 0 2em 0 2em;
+    padding: 2em;
     width: 80%;
+
+    canvas {
+      margin: auto;
+    }
   }
 }
