@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/guilleiguaran/fakeredis
+  revision: 9459b23ba3579fc41e0d24cdb1e64f2c4590c759
+  ref: 9459b23ba3579fc41e0d24cdb1e64f2c4590c759
+  specs:
+    fakeredis (0.5.0)
+      redis (~> 3.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -216,6 +224,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  fakeredis!
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
