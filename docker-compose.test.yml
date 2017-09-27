@@ -9,16 +9,6 @@ services:
       - postgres
     environment:
       RAILS_ENV: test
-  worker:
-    build: .
-    command: bundle exec sidekiq
-    volumes:
-      - .:/usr/src/app
-    links:
-      - web
-      - postgres
-    environment:
-      RAILS_ENV: test
   postgres:
     image: postgres:9.6
     volumes:
