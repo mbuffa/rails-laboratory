@@ -12,6 +12,8 @@ services:
       - redis
       - postgres
     env_file: .env.web
+    environment:
+      SCOUT_DEV_TRACE: 'true'
   worker:
     build: .
     command: bundle exec sidekiq
