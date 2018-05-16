@@ -2,6 +2,14 @@ version: '3'
 
 services:
   web:
-    command: ''
+    build: .
+    volumes:
+      - .:/usr/src/app
+    links:
+      - postgres
     environment:
       RAILS_ENV: test
+  postgres:
+    image: postgres:9.6
+    volumes:
+      - ./db/data:/var/lib/postgresql/data
