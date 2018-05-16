@@ -2,7 +2,9 @@ version: '3'
 
 services:
   web:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
     command: bin/rails server -b 0.0.0.0
     volumes:
       - .:/usr/src/app
@@ -15,7 +17,9 @@ services:
     environment:
       SCOUT_DEV_TRACE: 'true'
   worker:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
     command: bundle exec sidekiq
     volumes:
       - .:/usr/src/app
