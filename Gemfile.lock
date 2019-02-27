@@ -47,6 +47,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (8.0.0)
+    awesome_print (1.8.0)
     bindex (0.5.0)
     binding_of_caller (0.8.0)
       debug_inspector (>= 0.0.1)
@@ -227,6 +228,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print
   byebug
   fakeredis!
   jbuilder (~> 2.5)
@@ -254,4 +256,4 @@ DEPENDENCIES
   webpacker (~> 3.0)
 
 BUNDLED WITH
-   1.16.1
+   1.16.6
