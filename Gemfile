@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.0'
+gem 'rails', '~> 5.2.0'
 # Postgres database driver.
 gem 'pg'
 # Use Puma as the app server
@@ -29,6 +29,8 @@ gem 'jbuilder', '~> 2.5'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem "bootsnap", ">= 1.1.0", require: false
 
 gem 'redis-rails'
 
