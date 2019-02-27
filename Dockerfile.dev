@@ -1,5 +1,5 @@
 # TODO: Pick ubuntu:14.04
-FROM ruby:2.4
+FROM ruby:2.6
 
 # APT doesn't seem to come with its https driver...
 RUN apt-get update && apt-get install apt-transport-https
